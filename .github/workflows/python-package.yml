@@ -36,7 +36,7 @@ jobs:
     
     - name: Docker-compose start mqtt 
       run: | 
-        cd docker/test_tracker_dcs_low_voltage
+        cd docker/tracker_dcs_dummy
         pwd
         echo "---------------------"
         
@@ -45,14 +45,13 @@ jobs:
         cd -
     - name: Run black --check .
       run: black --check . --exclude _actions
-  
-    - name: Test with pytest
-      run: |
-        cd unittests
-        python3 -m pip install pytest
+   # - name: Test with pytest
+   #   run: |
+   #     cd unittests
+   #     python3 -m pip install pytest
     #    python3 -m pip install pytest-cov
     #    python3 -m pytest --cov=../ --cov-report=xml
-        ls
+    #    ls
     #- name: Upload coverage to Codecov
     #  uses: codecov/codecov-action@v3
     #  with:
