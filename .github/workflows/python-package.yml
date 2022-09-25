@@ -51,10 +51,10 @@ jobs:
         cd unittests
         pwd
         python3 -m pip install pytest
-        python3 -m pytest .
-    #    python3 -m pip install pytest-cov
-    #    python3 -m pytest --cov=../ --cov-report=xml
-        #ls
+      #python3 -m pytest .
+        python3 -m pip install pytest-cov
+        python3 -m pytest --cov=../ --cov-report=xml
+        ls
     #- name: Upload coverage to Codecov
     #  uses: codecov/codecov-action@v3
     #  with:
