@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir -r requirements/docker.txt
 #RUN pip install --no-cache-dir -r requirements.txt
 
 # install this package
-COPY tracker_dcs_dummy/dummy ./dummy
+COPY dummy ./dummy
 
 
 

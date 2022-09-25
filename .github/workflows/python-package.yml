@@ -45,8 +45,8 @@ jobs:
         cd -
     - name: Run black --check .
       run: black --check . --exclude _actions
-    '''
-    - name: Test with pytest
+  
+    '''- name: Test with pytest
       run: |
         cd unittests
         python3 -m pip install pytest
@@ -63,6 +63,5 @@ jobs:
         flags: unittests
         #name: codecov-umbrella
         #path_to_write_report: ./coverage/codecov_report.txt
-        #verbose: true
-  '''
+        #verbose: true ```
    
