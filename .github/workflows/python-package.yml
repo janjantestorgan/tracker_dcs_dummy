@@ -43,15 +43,18 @@ jobs:
         echo $HOME
         docker-compose up -d 
         cd -
+        pwd
     - name: Run black --check .
       run: black --check . --exclude _actions
     - name: Test with pytest
       run: |
         cd unittests
+        pwd
         python3 -m pip install pytest
+        python3 -m pytest .
     #    python3 -m pip install pytest-cov
     #    python3 -m pytest --cov=../ --cov-report=xml
-        ls
+        #ls
     #- name: Upload coverage to Codecov
     #  uses: codecov/codecov-action@v3
     #  with:
