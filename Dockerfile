@@ -15,4 +15,5 @@ COPY dummy ./dummy
 COPY setup.py ./
 RUN pip install -e .
 ENV PYTHONUNBUFFERED 1
+CMD [ "python", "dummy/hv.py", "hv", "mosquitto"]
 

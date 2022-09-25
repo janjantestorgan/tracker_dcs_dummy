@@ -54,7 +54,7 @@ jobs:
         python3 -m pip install pytest-cov
         python3 -m pytest --cov=../ --cov-report=xml
         ls
-    #python3 -m pytest .
+    
     #- name: Upload coverage to Codecov
     #  uses: codecov/codecov-action@v3
     #  with:
