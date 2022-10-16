@@ -5,7 +5,7 @@ on:
       - 'dev'
       #- 'main'
     tags:
-      - 'v*'
+      - 'v_*'
 
 env:
   REGISTRY: ghcr.io
