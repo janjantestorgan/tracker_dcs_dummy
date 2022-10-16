@@ -17,9 +17,9 @@ jobs:
     steps:
         -
           name: Checkout 
-          uses: actions/checkout@v3
-          with:
-            ref: ${{ github.ref }}
+          uses: actions/checkout@v2
+          #with:
+          #  ref: ${{ github.ref }}
         -
           name: Docker metadata
           id: meta
@@ -27,7 +27,7 @@ jobs:
           with:
             images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
             tags: |
-              type=ref,event=tags
+              type=ref,event=branch 
               type=semver,pattern={{version}}
               type=semver,pattern={{major}}.{{minor}}
         -
